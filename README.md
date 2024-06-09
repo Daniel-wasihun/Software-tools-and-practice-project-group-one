@@ -1,4 +1,7 @@
 # Software-tools-and-practice-project-group-one
+do your  project and push it to the repository 
+
+contribute on the same question is appriciated
 
 do your project and push it to the repository
 
