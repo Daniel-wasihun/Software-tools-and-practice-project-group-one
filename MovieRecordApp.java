@@ -1,12 +1,21 @@
+package tools;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+/**
+ * MovieRecordApp class represents a movie record application.
+ */
 public class MovieRecordApp {
+    // List to store movie records
     private List<MovieRecord> movieList;
+    // Scanner object to read input from the user
     private Scanner scanner;
 
+    /**
+     * Constructor to initialize the movie list and scanner.
+     */
     public MovieRecordApp() {
         movieList = new ArrayList<>();
         scanner = new Scanner(System.in);
@@ -17,6 +26,9 @@ public class MovieRecordApp {
         app.run();
     }
 
+    /**
+     * Main application loop.
+     */
     public void run() {
         boolean exit = false;
         while (!exit) {
@@ -54,6 +66,9 @@ public class MovieRecordApp {
         scanner.close();
     }
 
+    /**
+     * Add a new movie to the list.
+     */
     public void addMovie() {
         System.out.println("Enter title:");
         String title = scanner.nextLine();
@@ -68,6 +83,9 @@ public class MovieRecordApp {
         System.out.println("Movie added successfully.");
     }
 
+    /**
+     * Find a movie by title.
+     */
     public void findMovie() {
         System.out.println("Enter title to search:");
         String title = scanner.nextLine();
@@ -82,6 +100,9 @@ public class MovieRecordApp {
         System.out.println("Movie not found.");
     }
 
+    /**
+     * Update a movie's details.
+     */
     public void updateMovie() {
         System.out.println("Enter title to update:");
         String title = scanner.nextLine();
@@ -106,6 +127,9 @@ public class MovieRecordApp {
         System.out.println("Movie not found.");
     }
 
+    /**
+     * Delete a movie by title.
+     */
     public void deleteMovie() {
         System.out.println("Enter title to delete:");
         String title = scanner.nextLine();
@@ -121,11 +145,24 @@ public class MovieRecordApp {
     }
 }
 
+/**
+ * MovieRecord class represents a movie record.
+ */
 class MovieRecord {
+    // Movie title
     private String title;
+    // Movie director
     private String director;
+    // Movie year
     private int year;
 
+    /**
+     * Constructor to initialize the movie record.
+     * 
+     * @param title    the movie title
+     * @param director the movie director
+     * @param year     the movie year
+     */
     public MovieRecord(String title, String director, int year) {
         this.title = title;
         this.director = director;
